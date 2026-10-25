@@ -26,6 +26,9 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .site-header { border-bottom: 1px solid var(--border); }
 .site-header .wrap { display: flex; align-items: center; min-height: 64px; }
 .brand { font-weight: 700; font-size: 1.25rem; color: var(--text); text-decoration: none; }
+.lang-switch { margin-left: auto; display: flex; gap: 12px; font-size: .9rem; }
+.lang-switch a { color: var(--muted); text-decoration: none; }
+.lang-switch a[aria-current] { color: var(--text); font-weight: 600; }
 .site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 24px 0; font-size: .9rem; }
 .muted { color: var(--muted); }
 

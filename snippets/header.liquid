@@ -1,5 +1,12 @@
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{{ site.url }}/">{{ site.name }}</a>
+    <a class="brand" href="{{ site.home_url }}">{{ site.name }}</a>
+    {% if site.locales.size > 1 %}
+      <nav class="lang-switch" aria-label="{{ 'nav.language' | t }}">
+        {% for l in site.locales %}
+          <a href="{{ l.url }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.current %} aria-current="true"{% endif %}>{{ l.name }}</a>
+        {% endfor %}
+      </nav>
+    {% endif %}
   </div>
 </header>

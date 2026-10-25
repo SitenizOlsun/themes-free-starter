@@ -1,7 +1,16 @@
 {
+  "nav": {
+    "language": "Dil"
+  },
   "errors": {
     "home": "Ana sayfaya dön",
-    "not_found": { "title": "Sayfa bulunamadı", "body": "Aradığınız sayfa taşınmış ya da silinmiş olabilir." },
-    "module_disabled": { "title": "Bu bölüm şu anda kapalı", "body": "Bu sayfa sitenin mevcut paketinde yer almıyor." }
+    "not_found": {
+      "title": "Sayfa bulunamadı",
+      "body": "Aradığınız sayfa taşınmış ya da silinmiş olabilir."
+    },
+    "module_disabled": {
+      "title": "Bu bölüm şu anda kapalı",
+      "body": "Bu sayfa sitenin mevcut paketinde yer almıyor."
+    }
   }
 }
