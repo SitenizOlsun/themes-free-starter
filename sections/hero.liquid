@@ -1,0 +1,7 @@
+<div class="sz-hero{% if block.settings.image != "" %} has-image{% endif %}"{% if block.settings.image != "" %} style="background-image: url('{{ block.settings.image }}')"{% endif %}>
+  <h1>{{ block.settings.title }}</h1>
+  {% if block.settings.subtitle != "" %}<p class="lead">{{ block.settings.subtitle }}</p>{% endif %}
+  {% if block.settings.button_label != "" %}
+    <p><a class="button" href="{{ block.settings.button_link | default: '#' }}">{{ block.settings.button_label }}</a></p>
+  {% endif %}
+</div>

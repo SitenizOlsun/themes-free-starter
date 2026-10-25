@@ -1,0 +1,55 @@
+/* Starter — sade başlangıç teması */
+:root {
+  --accent: #2563eb;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --surface: #f5f7fa;
+  --border: #e5e7eb;
+  --radius: 8px;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --text: #e5e7eb; --muted: #9ca3af; --bg: #111418; --surface: #1a1f25; --border: #2a3039; }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; color: var(--text); background: var(--bg); line-height: 1.6; }
+.font-sans body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.font-serif body { font-family: Georgia, "Times New Roman", serif; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.site-header { border-bottom: 1px solid var(--border); }
+.site-header .wrap { display: flex; align-items: center; min-height: 64px; }
+.brand { font-weight: 700; font-size: 1.25rem; color: var(--text); text-decoration: none; }
+.site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 24px 0; font-size: .9rem; }
+.muted { color: var(--muted); }
+
+.sz-section.pad-none { padding: 0; }
+.sz-section.pad-small { padding: 16px 0; }
+.sz-section.pad-medium { padding: 40px 0; }
+.sz-section.pad-large { padding: 80px 0; }
+.sz-inner { margin: 0 auto; padding: 0 16px; }
+.sz-inner.w-narrow { max-width: 720px; }
+.sz-inner.w-normal { max-width: var(--wrap); }
+.sz-inner.w-wide { max-width: 1400px; }
+.sz-inner.w-full { max-width: none; padding: 0; }
+.sz-inner > * + * { margin-top: 24px; }
+.center { text-align: center; }
+
+.sz-text.align-center { text-align: center; }
+.sz-text.align-right { text-align: right; }
+.sz-image { margin: 0; }
+.sz-image img { border-radius: var(--radius); }
+.sz-image figcaption { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+
+.sz-hero { padding: 64px 24px; border-radius: var(--radius); background: var(--surface); text-align: center; }
+.sz-hero.has-image { background-size: cover; background-position: center; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.sz-hero .lead { font-size: 1.2rem; max-width: 640px; margin: 0 auto 1em; }
+
+.button { display: inline-block; padding: 10px 20px; border-radius: var(--radius); background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.button:hover { filter: brightness(1.08); }

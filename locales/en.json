@@ -1,0 +1,7 @@
+{
+  "errors": {
+    "home": "Back to the home page",
+    "not_found": { "title": "Page not found", "body": "The page you are looking for may have moved or been removed." },
+    "module_disabled": { "title": "This section is currently unavailable", "body": "This page is not part of the site's current plan." }
+  }
+}

@@ -1,0 +1,5 @@
+<section id="s-{{ section.id }}" class="sz-section pad-{{ section.settings.padding | default: 'medium' }}"{% if section.settings.background != "" %} style="background: {{ section.settings.background }}"{% endif %}>
+  <div class="sz-inner w-{{ section.settings.width | default: 'normal' }}">
+    {{ section.content }}
+  </div>
+</section>

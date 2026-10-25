@@ -1,0 +1,27 @@
+{
+  "name": "Starter",
+  "slug": "starter",
+  "version": "0.1.0",
+  "license": "free",
+  "author": "Sitenizolsun",
+  "description": {
+    "tr": "Sade, hızlı başlangıç teması. Yeni temalar bundan türetilir.",
+    "en": "A plain, fast starter theme. New themes are derived from it."
+  },
+  "default_locale": "tr",
+  "modules": ["pages"],
+  "settings": [
+    { "id": "accent_color", "type": "color", "label": { "tr": "Vurgu rengi", "en": "Accent color" }, "default": "#2563eb" },
+    {
+      "id": "font",
+      "type": "select",
+      "label": { "tr": "Yazı tipi", "en": "Font" },
+      "default": "sans",
+      "options": [
+        { "value": "sans", "label": { "tr": "Sans-serif", "en": "Sans-serif" } },
+        { "value": "serif", "label": { "tr": "Serif", "en": "Serif" } }
+      ]
+    },
+    { "id": "footer_text", "type": "text", "label": { "tr": "Alt bilgi metni", "en": "Footer text" }, "default": "" }
+  ]
+}

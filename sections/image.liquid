@@ -1,0 +1,8 @@
+{% if block.settings.src != "" %}
+<figure class="sz-image">
+  {% if block.settings.link != "" %}<a href="{{ block.settings.link }}">{% endif %}
+  <img src="{{ block.settings.src }}" alt="{{ block.settings.alt }}" loading="lazy">
+  {% if block.settings.link != "" %}</a>{% endif %}
+  {% if block.settings.caption != "" %}<figcaption>{{ block.settings.caption }}</figcaption>{% endif %}
+</figure>
+{% endif %}

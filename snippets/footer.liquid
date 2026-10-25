@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <div class="wrap">
+    {% if settings.footer_text != "" %}
+      <p>{{ settings.footer_text }}</p>
+    {% endif %}
+    <p class="muted">© {{ 'now' | date: '%Y' }} {{ site.name }}</p>
+  </div>
+</footer>
