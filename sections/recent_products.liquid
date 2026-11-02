@@ -1,0 +1,6 @@
+<div class="sz-recent-products">
+  {% if block.settings.title != "" %}<h2>{{ block.settings.title }}</h2>{% endif %}
+  <div class="sz-post-grid">
+    {% for product in block.products %}{% render 'product_card', product: product %}{% endfor %}
+  </div>
+</div>

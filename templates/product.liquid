@@ -1,0 +1,9 @@
+<article class="sz-product">
+  <h1>{{ product.name }}</h1>
+  {% if product.category.name != "" %}<p class="muted"><a href="{{ product.category.url }}">{{ product.category.name }}</a></p>{% endif %}
+  {% if product.available == false %}<p class="sz-price">{{ 'products.out_of_stock' | t }}</p>{% elsif product.price != "" %}<p class="sz-price">{{ product.price }}</p>{% endif %}
+  {% if product.summary != "" %}<p>{{ product.summary }}</p>{% endif %}
+  {% render 'photos', photos: product.photos %}
+  <div class="sz-post-body">{{ product.description }}</div>
+  {% if product.sku != "" %}<p class="muted">{{ 'products.sku' | t }}: {{ product.sku }}</p>{% endif %}
+</article>

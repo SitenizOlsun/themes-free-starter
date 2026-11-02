@@ -1,0 +1,7 @@
+<article class="sz-post-card">
+  {% if product.cover_url != "" %}
+    <img src="{{ product.cover_url }}"{% if product.cover_srcset != "" %} srcset="{{ product.cover_srcset }}" sizes="(max-width: 800px) 100vw, 400px"{% endif %} alt="{{ product.cover_alt }}" loading="lazy">
+  {% endif %}
+  <h2><a href="{{ product.url }}">{{ product.name }}</a></h2>
+  {% if product.available == false %}<p class="muted">{{ 'products.out_of_stock' | t }}</p>{% elsif product.price != "" %}<p class="sz-price">{{ product.price }}</p>{% endif %}
+</article>

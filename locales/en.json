@@ -33,5 +33,14 @@
     "newer": "Newer albums",
     "older": "Older albums",
     "photos": "photos"
+  },
+  "products": {
+    "empty": "No products yet.",
+    "all": "All",
+    "out_of_stock": "Out of stock",
+    "sku": "SKU",
+    "categories": "Categories",
+    "previous": "Previous page",
+    "next": "Next page"
   }
 }

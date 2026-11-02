@@ -33,5 +33,14 @@
     "newer": "Daha yeni albümler",
     "older": "Daha eski albümler",
     "photos": "fotoğraf"
+  },
+  "products": {
+    "empty": "Henüz ürün yok.",
+    "all": "Tümü",
+    "out_of_stock": "Stokta yok",
+    "sku": "Stok kodu",
+    "categories": "Kategoriler",
+    "previous": "Önceki sayfa",
+    "next": "Sonraki sayfa"
   }
 }

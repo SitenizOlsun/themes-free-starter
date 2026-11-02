@@ -93,3 +93,9 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .sz-photos figure { margin: 0; }
 .sz-photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 .sz-photos figcaption { font-size: .9rem; color: var(--muted); margin-top: .25rem; }
+
+/* Ürünler */
+.sz-products, .sz-product { box-sizing: border-box; width: 100%; max-width: var(--wrap); padding: 2rem 1rem; margin: 0 auto; }
+.sz-price { font-weight: 600; font-size: 1.1rem; }
+.sz-categories { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin-bottom: 1.5rem; }
+.sz-categories a[aria-current] { font-weight: 600; color: var(--text); }

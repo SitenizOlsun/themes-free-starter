@@ -1,0 +1,20 @@
+<section class="sz-products">
+  <h1>{{ page.title }}</h1>
+  {% if category.description != "" %}<p>{{ category.description }}</p>{% endif %}
+  {% if categories.size > 0 %}
+    <nav class="sz-categories" aria-label="{{ 'products.categories' | t }}">
+      <a href="{{ products_url }}"{% if category.name == "" %} aria-current="page"{% endif %}>{{ 'products.all' | t }}</a>
+      {% for c in categories %}<a href="{{ c.url }}"{% if c.active %} aria-current="page"{% endif %}>{{ c.name }}</a>{% endfor %}
+    </nav>
+  {% endif %}
+  {% if products.size == 0 %}<p class="muted">{{ 'products.empty' | t }}</p>{% endif %}
+  <div class="sz-post-grid">
+    {% for product in products %}{% render 'product_card', product: product %}{% endfor %}
+  </div>
+  {% if pagination.prev_url != "" or pagination.next_url != "" %}
+    <nav class="sz-pagination" aria-label="{{ 'blog.pagination' | t }}">
+      {% if pagination.prev_url != "" %}<a href="{{ pagination.prev_url }}">{{ 'products.previous' | t }}</a>{% endif %}
+      {% if pagination.next_url != "" %}<a href="{{ pagination.next_url }}">{{ 'products.next' | t }}</a>{% endif %}
+    </nav>
+  {% endif %}
+</section>
