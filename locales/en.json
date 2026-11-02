@@ -14,5 +14,18 @@
       "title": "This section is currently unavailable",
       "body": "This page is not part of the site's current plan."
     }
+  },
+  "blog": {
+    "empty": "No posts yet.",
+    "newer": "Newer posts",
+    "older": "Older posts",
+    "pagination": "Pages"
+  },
+  "form": {
+    "name": "Your name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Your message",
+    "send": "Send"
   }
 }

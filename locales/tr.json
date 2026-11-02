@@ -14,5 +14,18 @@
       "title": "Bu bölüm şu anda kapalı",
       "body": "Bu sayfa sitenin mevcut paketinde yer almıyor."
     }
+  },
+  "blog": {
+    "empty": "Henüz yazı yok.",
+    "newer": "Daha yeni yazılar",
+    "older": "Daha eski yazılar",
+    "pagination": "Sayfalar"
+  },
+  "form": {
+    "name": "Adınız",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "message": "Mesajınız",
+    "send": "Gönder"
   }
 }

@@ -1,0 +1,8 @@
+<article class="sz-post">
+  <h1>{{ post.title }}</h1>
+  <p class="muted"><time datetime="{{ post.published_at }}">{{ post.published_at | date: "%d.%m.%Y" }}</time></p>
+  {% if post.cover_url != "" %}
+    <img class="sz-post-cover" src="{{ post.cover_url }}"{% if post.cover_srcset != "" %} srcset="{{ post.cover_srcset }}" sizes="100vw"{% endif %} alt="{{ post.cover_alt }}">
+  {% endif %}
+  <div class="sz-post-body">{{ post.content }}</div>
+</article>

@@ -1,7 +1,7 @@
 {
   "name": "Starter",
   "slug": "starter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "free",
   "author": "Sitenizolsun",
   "description": {
@@ -9,7 +9,7 @@
     "en": "A plain, fast starter theme. New themes are derived from it."
   },
   "default_locale": "tr",
-  "modules": ["pages"],
+  "modules": ["pages", "blog", "forms"],
   "settings": [
     { "id": "accent_color", "type": "color", "label": { "tr": "Vurgu rengi", "en": "Accent color" }, "default": "#2563eb" },
     {

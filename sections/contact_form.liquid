@@ -1,0 +1,11 @@
+<form class="sz-contact-form" method="post" action="{{ block.form.action }}">
+  {% if block.settings.title != "" %}<h2>{{ block.settings.title }}</h2>{% endif %}
+  {% if block.settings.intro != "" %}<p>{{ block.settings.intro }}</p>{% endif %}
+  <input type="hidden" name="locale" value="{{ block.form.locale }}">
+  <p style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="{{ block.form.honeypot }}" tabindex="-1" autocomplete="off"></p>
+  <p><label>{{ 'form.name' | t }}<input type="text" name="name" maxlength="200" required></label></p>
+  <p><label>{{ 'form.email' | t }}<input type="email" name="email" maxlength="254" required></label></p>
+  {% if block.settings.show_phone == "yes" %}<p><label>{{ 'form.phone' | t }}<input type="tel" name="phone" maxlength="40"></label></p>{% endif %}
+  <p><label>{{ 'form.message' | t }}<textarea name="message" rows="6" maxlength="5000" required></textarea></label></p>
+  <p><button class="button" type="submit">{% if block.settings.button_label != "" %}{{ block.settings.button_label }}{% else %}{{ 'form.send' | t }}{% endif %}</button></p>
+</form>

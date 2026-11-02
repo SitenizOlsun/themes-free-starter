@@ -68,3 +68,21 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .site-nav li ul { display: none; position: absolute; top: 100%; left: 0; z-index: 10; flex-direction: column; gap: .5rem; padding: .75rem 1rem; min-width: 10rem; background: var(--bg, #fff); border: 1px solid var(--border); border-radius: 6px; }
 .site-nav li:hover > ul, .site-nav li:focus-within > ul { display: flex; }
 .footer-nav, .social, .contact { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: .75rem; font-style: normal; }
+
+/* Blog */
+.sz-post-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.sz-post-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); }
+.sz-post-card h2 { font-size: 1.25rem; margin: .75rem 0 .25rem; }
+.sz-post-card p { margin: .25rem 0; }
+.sz-post { max-width: 720px; }
+.sz-post-cover { width: 100%; height: auto; border-radius: var(--radius); margin: 1rem 0; }
+.sz-post-body img { max-width: 100%; height: auto; }
+.sz-pagination { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+
+/* İletişim formu */
+.sz-contact-form { max-width: 560px; }
+.sz-contact-form label { display: block; font-weight: 500; }
+.sz-contact-form input, .sz-contact-form textarea { display: block; width: 100%; margin-top: .25rem; padding: .6rem .75rem; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); }
+.sz-blog, .sz-post, .sz-form-result { box-sizing: border-box; width: 100%; padding: 2rem 1rem; margin: 0 auto; }
+.sz-blog { max-width: var(--wrap); }
+.sz-form-result { max-width: 720px; }
