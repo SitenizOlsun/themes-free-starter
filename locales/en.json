@@ -27,5 +27,11 @@
     "phone": "Phone",
     "message": "Your message",
     "send": "Send"
+  },
+  "gallery": {
+    "empty": "No albums yet.",
+    "newer": "Newer albums",
+    "older": "Older albums",
+    "photos": "photos"
   }
 }

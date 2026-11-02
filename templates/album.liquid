@@ -1,0 +1,5 @@
+<article class="sz-album">
+  <h1>{{ album.title }}</h1>
+  {% if album.description != "" %}<p>{{ album.description }}</p>{% endif %}
+  {% render 'photos', photos: album.photos %}
+</article>

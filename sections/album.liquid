@@ -1,0 +1,4 @@
+<div class="sz-album-block">
+  {% if block.settings.title != "" %}<h2>{{ block.settings.title }}</h2>{% endif %}
+  {% render 'photos', photos: block.album.photos %}
+</div>

@@ -1,0 +1,8 @@
+<div class="sz-photos">
+  {% for photo in photos %}
+    <figure>
+      <a href="{{ photo.url }}"><img src="{{ photo.thumb_url }}" srcset="{{ photo.srcset }}" sizes="(max-width: 800px) 50vw, 300px" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ photo.alt }}" loading="lazy"></a>
+      {% if photo.caption != "" %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endfor %}
+</div>

@@ -86,3 +86,10 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 .sz-blog, .sz-post, .sz-form-result { box-sizing: border-box; width: 100%; padding: 2rem 1rem; margin: 0 auto; }
 .sz-blog { max-width: var(--wrap); }
 .sz-form-result { max-width: 720px; }
+
+/* Galeri */
+.sz-gallery, .sz-album { box-sizing: border-box; width: 100%; max-width: var(--wrap); padding: 2rem 1rem; margin: 0 auto; }
+.sz-photos { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.sz-photos figure { margin: 0; }
+.sz-photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+.sz-photos figcaption { font-size: .9rem; color: var(--muted); margin-top: .25rem; }

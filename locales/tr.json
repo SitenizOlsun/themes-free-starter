@@ -27,5 +27,11 @@
     "phone": "Telefon",
     "message": "Mesajınız",
     "send": "Gönder"
+  },
+  "gallery": {
+    "empty": "Henüz albüm yok.",
+    "newer": "Daha yeni albümler",
+    "older": "Daha eski albümler",
+    "photos": "fotoğraf"
   }
 }

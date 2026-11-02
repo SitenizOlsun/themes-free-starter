@@ -1,0 +1,21 @@
+<section class="sz-gallery">
+  <h1>{{ page.title }}</h1>
+  {% if albums.size == 0 %}<p class="muted">{{ 'gallery.empty' | t }}</p>{% endif %}
+  <div class="sz-post-grid">
+    {% for album in albums %}
+      <article class="sz-post-card">
+        {% if album.cover_url != "" %}
+          <img src="{{ album.cover_url }}"{% if album.cover_srcset != "" %} srcset="{{ album.cover_srcset }}" sizes="(max-width: 800px) 100vw, 400px"{% endif %} alt="{{ album.cover_alt }}" loading="lazy">
+        {% endif %}
+        <h2><a href="{{ album.url }}">{{ album.title }}</a></h2>
+        <p class="muted">{{ album.photo_count }} {{ 'gallery.photos' | t }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  {% if pagination.prev_url != "" or pagination.next_url != "" %}
+    <nav class="sz-pagination" aria-label="{{ 'blog.pagination' | t }}">
+      {% if pagination.prev_url != "" %}<a href="{{ pagination.prev_url }}">{{ 'gallery.newer' | t }}</a>{% endif %}
+      {% if pagination.next_url != "" %}<a href="{{ pagination.next_url }}">{{ 'gallery.older' | t }}</a>{% endif %}
+    </nav>
+  {% endif %}
+</section>
