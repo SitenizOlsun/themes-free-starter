@@ -1,6 +1,26 @@
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{{ site.home_url }}">{{ site.name }}</a>
+    <a class="brand" href="{{ site.home_url }}">
+      {% if site.logo_url != "" %}<img src="{{ site.logo_url }}" alt="{{ site.name }}" class="brand-logo">{% else %}{{ site.name }}{% endif %}
+    </a>
+    {% if site.menus.main.size > 0 %}
+      <nav class="site-nav" aria-label="{{ 'nav.main' | t }}">
+        <ul>
+          {% for item in site.menus.main %}
+            <li>
+              <a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              {% if item.children.size > 0 %}
+                <ul>
+                  {% for child in item.children %}
+                    <li><a href="{{ child.url }}"{% if child.active %} aria-current="page"{% endif %}>{{ child.label }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
     {% if site.locales.size > 1 %}
       <nav class="lang-switch" aria-label="{{ 'nav.language' | t }}">
         {% for l in site.locales %}

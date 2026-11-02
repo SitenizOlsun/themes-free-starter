@@ -1,5 +1,20 @@
 <footer class="site-footer">
   <div class="wrap">
+    {% if site.menus.footer.size > 0 %}
+      <nav class="footer-nav" aria-label="{{ 'nav.footer' | t }}">
+        {% for item in site.menus.footer %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}
+      </nav>
+    {% endif %}
+    {% if site.contact.phone != "" or site.contact.email != "" or site.contact.address != "" %}
+      <address class="contact">
+        {% if site.contact.address != "" %}<span>{{ site.contact.address }}</span>{% endif %}
+        {% if site.contact.phone != "" %}<a href="tel:{{ site.contact.phone | remove: ' ' }}">{{ site.contact.phone }}</a>{% endif %}
+        {% if site.contact.email != "" %}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>{% endif %}
+      </address>
+    {% endif %}
+    {% if site.contact.social.size > 0 %}
+      <p class="social">{% for l in site.contact.social %}<a href="{{ l.url }}" rel="noopener">{{ l.name }}</a>{% endfor %}</p>
+    {% endif %}
     {% if settings.footer_text != "" %}
       <p>{{ settings.footer_text }}</p>
     {% endif %}

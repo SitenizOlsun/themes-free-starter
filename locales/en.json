@@ -1,6 +1,8 @@
 {
   "nav": {
-    "language": "Language"
+    "language": "Language",
+    "main": "Main menu",
+    "footer": "Footer menu"
   },
   "errors": {
     "home": "Back to the home page",

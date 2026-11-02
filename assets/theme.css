@@ -56,3 +56,15 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); }
 
 .button { display: inline-block; padding: 10px 20px; border-radius: var(--radius); background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
 .button:hover { filter: brightness(1.08); }
+
+/* menü ve alt bilgi */
+.brand-logo { display: block; max-height: 40px; width: auto; }
+.site-header .wrap { gap: 1.5rem; flex-wrap: wrap; }
+.site-nav { margin-left: auto; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.site-nav li { position: relative; }
+.site-nav a { color: var(--text); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current] { color: var(--accent); }
+.site-nav li ul { display: none; position: absolute; top: 100%; left: 0; z-index: 10; flex-direction: column; gap: .5rem; padding: .75rem 1rem; min-width: 10rem; background: var(--bg, #fff); border: 1px solid var(--border); border-radius: 6px; }
+.site-nav li:hover > ul, .site-nav li:focus-within > ul { display: flex; }
+.footer-nav, .social, .contact { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: .75rem; font-style: normal; }

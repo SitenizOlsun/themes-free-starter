@@ -1,6 +1,8 @@
 {
   "nav": {
-    "language": "Dil"
+    "language": "Dil",
+    "main": "Ana menü",
+    "footer": "Alt menü"
   },
   "errors": {
     "home": "Ana sayfaya dön",
