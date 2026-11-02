@@ -42,5 +42,17 @@
     "categories": "Categories",
     "previous": "Previous page",
     "next": "Next page"
-  }
+  },
+  "announcements": {
+    "empty": "No announcements at the moment."
+  },
+  "events": {
+    "empty": "No events."
+  },
+  "poll": {
+    "vote": "Vote",
+    "results": "See results",
+    "closed": "This poll has ended."
+  },
+  "nav_account": "Membership"
 }

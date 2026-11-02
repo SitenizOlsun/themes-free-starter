@@ -1,0 +1,9 @@
+<article class="sz-post">
+  <h1>{{ event.title }}</h1>
+  <p class="sz-price"><time datetime="{{ event.starts_at }}">{{ event.when_text }}</time></p>
+  {% if event.location != "" %}<p class="muted">{{ event.location }}</p>{% endif %}
+  {% if event.cover_url != "" %}
+    <img class="sz-post-cover" src="{{ event.cover_url }}"{% if event.cover_srcset != "" %} srcset="{{ event.cover_srcset }}" sizes="100vw"{% endif %} alt="{{ event.cover_alt }}">
+  {% endif %}
+  <div class="sz-post-body">{{ event.content }}</div>
+</article>

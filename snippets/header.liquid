@@ -21,6 +21,7 @@
         </ul>
       </nav>
     {% endif %}
+    {% if site.membership.enabled %}<a class="site-account" href="{{ site.membership.account_url }}">{{ 'nav_account' | t }}</a>{% endif %}
     {% if site.locales.size > 1 %}
       <nav class="lang-switch" aria-label="{{ 'nav.language' | t }}">
         {% for l in site.locales %}

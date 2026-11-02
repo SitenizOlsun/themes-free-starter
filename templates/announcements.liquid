@@ -1,0 +1,11 @@
+<section class="sz-announcements">
+  <h1>{{ page.title }}</h1>
+  {% if announcements.size == 0 %}<p class="muted">{{ 'announcements.empty' | t }}</p>{% endif %}
+  {% for item in announcements %}{% render 'announcement_item', item: item %}{% endfor %}
+  {% if pagination.prev_url != "" or pagination.next_url != "" %}
+    <nav class="sz-pagination" aria-label="{{ 'blog.pagination' | t }}">
+      {% if pagination.prev_url != "" %}<a href="{{ pagination.prev_url }}">{{ 'products.previous' | t }}</a>{% endif %}
+      {% if pagination.next_url != "" %}<a href="{{ pagination.next_url }}">{{ 'products.next' | t }}</a>{% endif %}
+    </nav>
+  {% endif %}
+</section>

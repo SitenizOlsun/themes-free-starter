@@ -1,0 +1,7 @@
+<article class="sz-post-card">
+  {% if event.cover_url != "" %}
+    <img src="{{ event.cover_url }}"{% if event.cover_srcset != "" %} srcset="{{ event.cover_srcset }}" sizes="(max-width: 800px) 100vw, 400px"{% endif %} alt="{{ event.cover_alt }}" loading="lazy">
+  {% endif %}
+  <h2><a href="{{ event.url }}">{{ event.title }}</a></h2>
+  <p class="muted"><time datetime="{{ event.starts_at }}">{{ event.when_text }}</time>{% if event.location != "" %} · {{ event.location }}{% endif %}</p>
+</article>

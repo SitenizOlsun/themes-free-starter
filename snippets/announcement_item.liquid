@@ -1,0 +1,5 @@
+<article class="sz-announcement-item{% if item.pinned %} is-pinned{% endif %}">
+  <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+  <p class="muted"><time datetime="{{ item.published_at }}">{{ item.date_text }}</time></p>
+  {% if item.summary != "" %}<p>{{ item.summary }}</p>{% endif %}
+</article>

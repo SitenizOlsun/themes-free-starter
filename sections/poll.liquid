@@ -1,0 +1,16 @@
+{% if block.poll.question != "" %}
+<div class="sz-poll-block">
+  <h2>{{ block.poll.question }}</h2>
+  {% if block.poll.description != "" %}<p>{{ block.poll.description }}</p>{% endif %}
+  {% if block.poll.closed %}
+    <p class="muted">{{ 'poll.closed' | t }} <a href="{{ block.poll.url }}">{{ 'poll.results' | t }}</a></p>
+  {% else %}
+    <form method="post" action="{{ block.poll.action }}">
+      {% for option in block.poll.options %}
+        <p><label><input type="radio" name="option" value="{{ option.id }}" required> {{ option.label }}</label></p>
+      {% endfor %}
+      <p><button class="button" type="submit">{{ 'poll.vote' | t }}</button> <a href="{{ block.poll.url }}?sonuc=1">{{ 'poll.results' | t }}</a></p>
+    </form>
+  {% endif %}
+</div>
+{% endif %}

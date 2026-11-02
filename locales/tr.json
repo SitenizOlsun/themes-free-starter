@@ -42,5 +42,17 @@
     "categories": "Kategoriler",
     "previous": "Önceki sayfa",
     "next": "Sonraki sayfa"
-  }
+  },
+  "announcements": {
+    "empty": "Şu anda duyuru yok."
+  },
+  "events": {
+    "empty": "Etkinlik yok."
+  },
+  "poll": {
+    "vote": "Oy ver",
+    "results": "Sonuçları gör",
+    "closed": "Bu anket sona erdi."
+  },
+  "nav_account": "Üyelik"
 }

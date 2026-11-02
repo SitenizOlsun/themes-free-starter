@@ -1,0 +1,14 @@
+<section class="sz-events">
+  <h1>{{ page.title }}</h1>
+  {% if events.size == 0 %}<p class="muted">{{ 'events.empty' | t }}</p>{% endif %}
+  <div class="sz-post-grid">
+    {% for event in events %}{% render 'event_card', event: event %}{% endfor %}
+  </div>
+  {% if pagination.prev_url != "" or pagination.next_url != "" %}
+    <nav class="sz-pagination" aria-label="{{ 'blog.pagination' | t }}">
+      {% if pagination.prev_url != "" %}<a href="{{ pagination.prev_url }}">{{ 'products.previous' | t }}</a>{% endif %}
+      {% if pagination.next_url != "" %}<a href="{{ pagination.next_url }}">{{ 'products.next' | t }}</a>{% endif %}
+    </nav>
+  {% endif %}
+  <p><a href="{{ other_url }}">{{ other_label }}</a></p>
+</section>

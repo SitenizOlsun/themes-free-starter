@@ -1,0 +1,4 @@
+<div class="sz-announcements-block">
+  {% if block.settings.title != "" %}<h2>{{ block.settings.title }}</h2>{% endif %}
+  {% for item in block.announcements %}{% render 'announcement_item', item: item %}{% endfor %}
+</div>
